@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Future City</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-ring">
+        <div class="ring-segment"></div>
+      </div>
+      <div class="loader-bar-track">
+        <div id="loader-bar" class="loader-bar-fill"></div>
+      </div>
+      <div class="loader-text">INITIALIZING NEURAL CITY</div>
+    </div>
+  </div>
+
+  <!-- 3D World -->
+  <div id="world"></div>
+
+  <!-- Scroll Trigger (invisible, determines scroll height) -->
+  <div id="scroll-trigger"></div>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span class="brand">NEURAL CITY</span>
+      <span class="brand-sub">v1.0</span>
+    </div>
+    <div class="top-bar-right">
+      <button id="mode-toggle" class="mode-toggle">
+        <span class="toggle-icon">☀</span>
+        <span class="toggle-label">Day</span>
+      </button>
+      <div class="progress-display">
+        <span id="progress-text">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- District Info Overlay -->
+  <div id="ui-overlay" class="ui-overlay">
+    <div class="info-card">
+      <div class="info-eyebrow" id="section-eyebrow">DISTRICT 00</div>
+      <h1 class="info-title" id="section-title">Neural City</h1>
+      <p class="info-desc" id="section-description">Scroll to explore the AI metropolis</p>
+      <div class="info-tags" id="section-tags"></div>
+    </div>
+  </div>
+
+  <!-- Navigation Dots -->
+  <div class="nav-dots">
+    <button class="nav-dot" data-index="0" title="AI Assistant"></button>
+    <button class="nav-dot" data-index="1" title="Image Generation"></button>
+    <button class="nav-dot" data-index="2" title="Video Creation"></button>
+    <button class="nav-dot" data-index="3" title="Coding HQ"></button>
+    <button class="nav-dot" data-index="4" title="Data Analytics"></button>
+    <button class="nav-dot" data-index="5" title="Agent Marketplace"></button>
+    <button class="nav-dot" data-index="6" title="Space Terminal"></button>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar">
+    <div id="progress-fill" class="progress-fill"></div>
+  </div>
+
+  <!-- Scroll Hint -->
+  <div class="scroll-hint">
+    <span>SCROLL TO EXPLORE</span>
+    <div class="scroll-arrow"></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
