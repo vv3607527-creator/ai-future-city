@@ -86,7 +86,12 @@ export function checkAndUpdateDistrict(currentIndex) {
   if (elements.desc) elements.desc.textContent = d.desc;
 
   if (elements.tags) {
-    elements.tags.innerHTML = d.tags.map(t => `<span>${t}</span>`).join('');
+    // Build nodes instead of interpolating data into HTML.
+    elements.tags.replaceChildren(...d.tags.map((tag) => {
+      const span = document.createElement('span');
+      span.textContent = tag;
+      return span;
+    }));
   }
 
   // Color hint
